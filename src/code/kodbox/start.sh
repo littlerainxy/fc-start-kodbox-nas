@@ -2,9 +2,10 @@
 set +e
 
 echo "start the sh"
+mkdir -p /mnt/auto/
 if [ ! -d /mnt/auto/.kodbox-1.35.031 ]; then
   wget http://images.devsapp.cn/application/kodbox/kodbox-1.35.031.zip -O /mnt/auto/kodbox-1.35.031.zip
-  cd /mnt/auto && unzip kodbox-1.35.031.zip && mv kodbox-1.35.031 .kodbox-1.35.031 && rm kodbox-1.35.031.zip && cd -
+  cd /mnt/auto && unzip kodbox-1.35.031.zip && mv kodbox-1.35.031 .kodbox-1.35.031 && rm kodbox-1.35.031.zip
 fi
 
 ln -s /mnt/auto/.kodbox-1.35.031 /wwwroot
